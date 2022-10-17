@@ -7,5 +7,6 @@ data class Cost(
     val date: Date,
     val description: String,
     val costTypeId: Int,
-    val accountId: Int
+    val accountId: Int,
+    val confirmed: Boolean = true
 )
