@@ -14,12 +14,8 @@ class ExprenseManagerRepository private constructor(context: Context){
     ).build()
     private val executor = Executors.newSingleThreadExecutor()
     private val expenseManagerDAO = database.experenseManagerDAO()
-    fun getAllCurrency() = executor.execute {
-        expenseManagerDAO.getAllCurrency()
-    }
-    fun getCurrency(id: Int) = executor.execute {
-        expenseManagerDAO.getCurrency(id)
-    }
+    fun getAllCurrency() = expenseManagerDAO.getAllCurrency()
+    fun getCurrency(id: Int) = expenseManagerDAO.getCurrency(id)
     fun addCurrency(currency: Currency) = executor.execute {
         expenseManagerDAO.addCurrency(currency)
     }
@@ -30,12 +26,8 @@ class ExprenseManagerRepository private constructor(context: Context){
         expenseManagerDAO.deleteCurrency(currency)
     }
 
-    fun getAllAccountTypes() = executor.execute {
-        expenseManagerDAO.getAllAccountTypes()
-    }
-    fun getAccountType(id: Int) = executor.execute {
-        expenseManagerDAO.getAccountType(id)
-    }
+    fun getAllAccountTypes() = expenseManagerDAO.getAllAccountTypes()
+    fun getAccountType(id: Int) = expenseManagerDAO.getAccountType(id)
     fun addAccountType(accountType: AccountType) = executor.execute {
         expenseManagerDAO.addAccountType(accountType)
     }
@@ -48,12 +40,8 @@ class ExprenseManagerRepository private constructor(context: Context){
         expenseManagerDAO.deleteAccountType(accountType)
     }
 
-    fun getAllAccount() = executor.execute {
-        expenseManagerDAO.getAllAccount()
-    }
-    fun getAccount(id: Int) = executor.execute {
-        expenseManagerDAO.getAccount(id)
-    }
+    fun getAllAccount() = expenseManagerDAO.getAllAccount()
+    fun getAccount(id: Int) = expenseManagerDAO.getAccount(id)
     fun addAccount(account: Account) = executor.execute {
         expenseManagerDAO.addAccount(account)
     }
@@ -64,12 +52,8 @@ class ExprenseManagerRepository private constructor(context: Context){
         expenseManagerDAO.deleteAccount(account)
     }
 
-    fun getAllCostType() = executor.execute {
-        expenseManagerDAO.getAllCostType()
-    }
-    fun getCostType(id: Int) = executor.execute {
-        expenseManagerDAO.getCostType(id)
-    }
+    fun getAllCostType() = expenseManagerDAO.getAllCostType()
+    fun getCostType(id: Int) = expenseManagerDAO.getCostType(id)
     fun addCostType(costType: CostType) = executor.execute {
         expenseManagerDAO.addCostType(costType)
     }
@@ -82,12 +66,8 @@ class ExprenseManagerRepository private constructor(context: Context){
         expenseManagerDAO.deleteCostType(costType)
     }
 
-    fun getAllCost() = executor.execute {
-        expenseManagerDAO.getAllCost()
-    }
-    fun getCost(id: Int) = executor.execute {
-        expenseManagerDAO.getCost(id)
-    }
+    fun getAllCost() = expenseManagerDAO.getAllCost()
+    fun getCost(id: Int) = expenseManagerDAO.getCost(id)
     fun addCost(cost: Cost) = executor.execute {
         expenseManagerDAO.addCost(cost)
     }
