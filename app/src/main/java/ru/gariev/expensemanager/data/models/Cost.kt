@@ -12,7 +12,7 @@ data class Cost(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = BaseColumns._ID)
     val id: Int,
-    val date: Date,
+    val date: Date = Date(),
     val description: String,
     @ColumnInfo(index = true)
     val costTypeId: Int,
