@@ -13,6 +13,7 @@ data class Cost(
     @ColumnInfo(name = BaseColumns._ID)
     val id: Int,
     val date: Date = Date(),
+    val price: Float,
     val description: String,
     @ColumnInfo(index = true)
     val costTypeId: Int,
